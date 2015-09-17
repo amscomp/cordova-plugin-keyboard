@@ -1,9 +1,9 @@
 {
-  "name": "cordova-plugin-keyboard",
+  "name": "cordova-plugin-keyboard-ams",
   "version": "1.1.2",
   "description": "Cordova Keyboard Plugin",
   "cordova": {
-    "id": "cordova-plugin-keyboard",
+    "id": "cordova-plugin-keyboard-ams",
     "platforms": [
       "ios"
     ]
