@@ -5,7 +5,8 @@
   "cordova": {
     "id": "cordova-plugin-keyboard-ams",
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "repository": {
