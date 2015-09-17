@@ -8,7 +8,7 @@ import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
 import android.content.res.Configuration;
-import android.InputMethodService;
+import android.inputmethodservice.InputMethodService;
 
 public class Keyboard extends CordovaPlugin {
 
