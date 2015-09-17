@@ -1,15 +1,15 @@
 package org.apache.cordova.labs.keyboard;
 
-import android.app.Activity;
-import android.content.Context;
-import android.view.inputmethod.InputMethodManager;
+
+import android.content.res.Configuration;
 import android.InputMethodService;
-import android.view.View;
-import org.apache.cordova.*;
-import org.json.JSONArray;
-import org.json.JSONException;
+
 
 public class MyInputMethodService extends InputMethodService {
+    Configuration config = getResources().getConfiguration();
+    config.keyboard = 1;
+    config.hardKeyboardHidden == 2;
+    
     @Override
     public boolean onEvaluateInputViewShown() {
         return true;
