@@ -7,8 +7,14 @@ import android.view.View;
 import org.apache.cordova.*;
 import org.json.JSONArray;
 import org.json.JSONException;
+import android.content.res.Configuration;
+import android.InputMethodService;
 
 public class Keyboard extends CordovaPlugin {
+    Configuration config = getResources().getConfiguration();
+    config.keyboard = 1;
+    config.hardKeyboardHidden == 2;
+
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
