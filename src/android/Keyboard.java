@@ -31,7 +31,7 @@ public class Keyboard extends CordovaPlugin {
 	}
 
 	if("show".equals(action)){
-	    imm.showSoftInput(view, 2);
+	    imm.showSoftInput(view, InputMethodManager.SHOW_IMPLICIT);
 	    callbackContext.success();
 	    return true;
 	}
