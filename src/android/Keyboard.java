@@ -13,10 +13,15 @@ public class Keyboard extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        Configuration config = getResources().getConfiguration();
-        config.keyboard = 1;
-        config.hardKeyboardHidden = 2;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());	Activity activity = this.cordova.getActivity();
+    	
+    	Resources res = context.getResources();
+        // Change locale settings in the app.
+        DisplayMetrics dm = res.getDisplayMetrics();
+        android.content.res.Configuration conf = res.getConfiguration();
+        conf.keyboard = 1;
+        conf.hardKeyboardHidden = 2;
+        res.updateConfiguration(conf, dm);
+    	
 	InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
 	View view;
 	try {
