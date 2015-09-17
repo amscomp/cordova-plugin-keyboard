@@ -14,15 +14,10 @@ import android.inputmethodservice.InputMethodService;
 
 public class Keyboard extends CordovaPlugin {
 
+
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
     	Activity activity = this.cordova.getActivity();
-    	Configuration config = new Configuration();
-        config.keyboard = 1;
-        config.hardKeyboardHidden = 2;
-	getBaseContext().getResources().updateConfiguration(config,
-      		getBaseContext().getResources().getDisplayMetrics());
-
 	InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
 	View view;
 	try {
