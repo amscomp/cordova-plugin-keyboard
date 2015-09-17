@@ -24,6 +24,7 @@ public class Keyboard extends CordovaPlugin {
 	}
 
 	if("show".equals(action)){
+	    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
 	    imm.showSoftInput(view, 0);
 	    callbackContext.success();
 	    return true;
