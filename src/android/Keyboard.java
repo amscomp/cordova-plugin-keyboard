@@ -14,6 +14,7 @@ public class Keyboard extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
 	Activity activity = this.cordova.getActivity();
 	InputMethodManager imm = (InputMethodManager)activity.getSystemService(Context.INPUT_METHOD_SERVICE);
+	
 
 	View view;
 	try {
@@ -25,7 +26,6 @@ public class Keyboard extends CordovaPlugin {
 
 	if("show".equals(action)){
 	    imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0);
-	    imm.showSoftInput(view, 0);
 	    callbackContext.success();
 	    return true;
 	}
